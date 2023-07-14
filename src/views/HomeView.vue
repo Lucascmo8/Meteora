@@ -1,9 +1,11 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <main>
-    <h1>Olá mundo!</h1>
+    <CarouselImages />
+    <CategoryFilter />
   </main>
 </template>
+
+<script setup lang="ts">
+  import CarouselImages from '../components/CarouselImages.vue';
+  import CategoryFilter from '../components/CategoryFilter.vue';
+</script>

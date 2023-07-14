@@ -55,11 +55,7 @@
     }
 
     .menuDesktop{
-        @apply hidden md:flex w-full px-5 gap-4 bg-transparent grow;
-    }
-
-    .menuDesktop > a{
-        @apply grow
+        @apply hidden md:flex w-full px-5 gap-5 bg-transparent grow;
     }
 
     .menuMobile > button{
@@ -80,7 +76,7 @@
 
     
     #searchBox > input{
-        @apply border border-black font-semibold text-black w-full h-10 px-2 shadow-md md:w-36;
+        @apply border border-black text-xs font-semibold text-black w-full h-10 px-2 shadow-md md:w-36;
     }
 
     #searchBox > button{
