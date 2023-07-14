@@ -17,13 +17,10 @@
     </div>
 </template>
 
-<!-- https://picsum.photos/375/415 -->
-
-<script lang="ts" setup>
+<script setup lang="ts">
     import { ref } from "vue";
 
     let indexImg = ref<number>(0)
-    const taAqui = ref<boolean>(false)
 
     const nextImg = () =>{
         indexImg.value++
