@@ -1,7 +1,7 @@
 <template>
     <header>
         <div id="navegationBox">
-            <img src="../../public/logo.png" alt="Logo da Meteora">
+            <img src="../assets/logo.png" alt="Logo da Meteora">
             <button @click="toogleMenu" v-show="!showMenu" id="btnMenuMobile"><i class="uil uil-bars"></i></button>
             <nav v-show="showMenu" class="menuMobile">
                 <button @click="toogleMenu"><i class="uil uil-multiply"></i></button>
