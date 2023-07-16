@@ -4,7 +4,7 @@
       <div class="categoryBox">
           <div class="categoryCard" v-for="(category,index) in categories" :key="index">
               <div class="imageCard">
-                  <img :src="category.image" alt="" >
+                  <img src="../assets/Desktop/Categorias/CategoriaCamiseta.png" alt="" >
               </div>
               <div class="textCard">
                   <p>{{ category.name}}</p>
