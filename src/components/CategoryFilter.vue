@@ -23,7 +23,7 @@
     }
   
     const categories = ref<Item[]>([
-      {image: 'src/assets/Desktop/Categorias/CategoriaCamiseta.png', name:"Camiseta"},
+      {image: '../assets/Desktop/Categorias/CategoriaCamiseta.png', name:"Camiseta"},
       {image:"src/assets/Desktop/Categorias/CategoriaBolsa.png", name:"Bolsa"},
       {image:"src/assets/Desktop/Categorias/CategoriaCalcados.png",name:"Calçados"},
       {image:"src/assets/Desktop/Categorias/CategoriaCalca.png", name:"Calça"},

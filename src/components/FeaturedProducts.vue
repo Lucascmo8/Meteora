@@ -28,7 +28,7 @@
     }
 
   const products = ref<Product[]>([
-    {image: 'src/assets/Desktop/ImagensCards/Camiseta.png', name:"Camiseta Conforto",text:"Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.", price:70},
+    {image: '../assets/Desktop/ImagensCards/Camiseta.png', name:"Camiseta Conforto",text:"Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.", price:70},
     {image: 'src/assets/Desktop/ImagensCards/Calca.png', name:"Calça Alfaiataria",text:"Modelo wide leg alfaiataria em linho. Uma peça pra vida toda!", price:180},
     {image: 'src/assets/Desktop/ImagensCards/Tenis.png', name:"Tênis Chunky", text:"Snicker casual om soldado mais alto e modelagem robusta. Modelo unissex.", price:250},
     {image: 'src/assets/Desktop/ImagensCards/Jaqueta.png', name:"Jaqueta Jeans",text:"Modelo unissex oversized com gola de camurça. Atemporal e autêntia!", price:150},
