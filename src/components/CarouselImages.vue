@@ -1,9 +1,9 @@
 <template>
     <div id="carousel">
         <div id="carouselInner">
-            <img src="../assets/Mobile/Banner carousel 1 _ 375.png" alt=""  v-show="indexImg == 0">
-            <img src="../assets/Mobile/Banner carousel 2 _ 375.png" alt="" v-show="indexImg == 1">
-            <img src="../assets/Mobile/Banner carousel 3 _ 375.png" alt="" v-show="indexImg == 2">
+            <img src="../assets/Mobile/BannerCarousel1.png" alt=""  v-show="indexImg == 0">
+            <img src="../assets/Mobile/BannerCarousel2.png" alt="" v-show="indexImg == 1">
+            <img src="../assets/Mobile/BannerCarousel3.png" alt="" v-show="indexImg == 2">
         </div>
         <div class="controlsButtons">
             <button @click="prevImg" class=""><i class="uil uil-arrow-circle-left"></i></button>
