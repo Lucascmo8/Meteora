@@ -1,9 +1,20 @@
 <template>
     <div id="carousel" @mouseenter="stopCarousel" @mouseleave="startCarousel">
         <div id="carouselInner">
-            <img src="../assets/Desktop/BannerCarousel1.png" alt=""  v-show="indexImg == 0" class="animate__animated animate__slideInRight">
-            <img src="../assets/Desktop/BannerCarousel2.png" alt="" v-show="indexImg == 1" class="animate__animated animate__slideInRight">
-            <img src="../assets/Desktop/BannerCarousel3.png" alt="" v-show="indexImg == 2" class="animate__animated animate__slideInRight">
+            <picture>
+                <source media="(max-width: 548px)" srcset="../assets/Mobile/BannerCarousel1.png">
+                <source media="(max-width: 900px)" srcset="../assets/Tablet/BannerCarousel1.png">
+                <img src="../assets/Desktop/BannerCarousel1.png" alt=""  v-show="indexImg == 0" class="animate__animated animate__slideInRight"></picture>
+            <picture>
+                <source media="(max-width: 548px)" srcset="../assets/Mobile/BannerCarousel2.png">
+                <source media="(max-width: 900px)" srcset="../assets/Tablet/BannerCarousel2.png">
+                <img src="../assets/Desktop/BannerCarousel2.png" alt="" v-show="indexImg == 1" class="animate__animated animate__slideInRight">
+            </picture>
+            <picture>
+                <source media="(max-width: 548px)" srcset="../assets/Mobile/BannerCarousel3.png">
+                <source media="(max-width: 900px)" srcset="../assets/Tablet/BannerCarousel3.png">
+                <img src="../assets/Desktop/BannerCarousel3.png" alt="" v-show="indexImg == 2" class="animate__animated animate__slideInRight">
+            </picture>
         </div>
         <div class="controlsButtons">
             <button @click="prevImg" class=""><i class="uil uil-arrow-circle-left"></i></button>
@@ -50,11 +61,11 @@
 
 <style scoped>
     #carousel {
-        @apply flex justify-center cursor-pointer bg-black
+        @apply flex h-[415px] justify-center cursor-pointer bg-black
     }
 
     #carouselInner{
-        @apply relative w-full h-96 overflow-hidden transform transition-transform duration-500
+        @apply relative w-full h-full overflow-hidden transform transition-transform duration-500
     }
 
     img{
