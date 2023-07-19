@@ -28,12 +28,12 @@
     }
 
   const products = ref<Product[]>([
-    {image: 'src/assets/Desktop/ImagensCards/Camiseta.png', name:"Camiseta Conforto",text:"Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.", price:70},
-    {image: 'src/assets/Desktop/ImagensCards/Calca.png', name:"Calça Alfaiataria",text:"Modelo wide leg alfaiataria em linho. Uma peça pra vida toda!", price:180},
-    {image: 'src/assets/Desktop/ImagensCards/Tenis.png', name:"Tênis Chunky", text:"Snicker casual om soldado mais alto e modelagem robusta. Modelo unissex.", price:250},
-    {image: 'src/assets/Desktop/ImagensCards/Jaqueta.png', name:"Jaqueta Jeans",text:"Modelo unissex oversized com gola de camurça. Atemporal e autêntia!", price:150},
-    {image: 'src/assets/Desktop/ImagensCards/Oculos.png', name:"Óculos Redondo",text:"Armação metálica em grafite com lentes arredondas. Sem erro!", price:120},
-    {image: 'src/assets/Desktop/ImagensCards/Bolsa.png', name:"Bolsa coringa",text:"Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!", price:120},
+    {image: '/assets/ImagensCards/Camiseta.png', name:"Camiseta Conforto",text:"Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.", price:70},
+    {image: '/assets/ImagensCards/Calca.png', name:"Calça Alfaiataria",text:"Modelo wide leg alfaiataria em linho. Uma peça pra vida toda!", price:180},
+    {image: '/assets/ImagensCards/Tenis.png', name:"Tênis Chunky", text:"Snicker casual om soldado mais alto e modelagem robusta. Modelo unissex.", price:250},
+    {image: '/assets/ImagensCards/Jaqueta.png', name:"Jaqueta Jeans",text:"Modelo unissex oversized com gola de camurça. Atemporal e autêntia!", price:150},
+    {image: '/assets/ImagensCards/Oculos.png', name:"Óculos Redondo",text:"Armação metálica em grafite com lentes arredondas. Sem erro!", price:120},
+    {image: '/assets/ImagensCards/Bolsa.png', name:"Bolsa coringa",text:"Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!", price:120},
     ])
 </script>
 

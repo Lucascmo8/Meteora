@@ -40,7 +40,7 @@
     onUnmounted(()=>{stopCarousel()})
 
     const startCarousel = () => {
-       intervalTimer = setInterval(nextImg,5000)
+       intervalTimer = setTimeout(nextImgWithTimeout,5000)
     }
 
     const stopCarousel = () => {
@@ -50,12 +50,16 @@
     const nextImg = () =>{
         indexImg.value++
         indexImg.value > 2 ? indexImg.value = 0:indexImg.value
-
     }
 
     const prevImg = () =>{
         indexImg.value--
         indexImg.value < 0 ? indexImg.value = 2:indexImg.value
+    }
+
+    const nextImgWithTimeout = () => {
+        nextImg()
+        intervalTimer = setTimeout(nextImg,5000)
     }
 </script>
 

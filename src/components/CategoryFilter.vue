@@ -23,12 +23,12 @@
   }
 
   const categories = ref<Item[]>([
-    {image: 'src/assets/Desktop/Categorias/CategoriaCamiseta.png', name:"Camiseta"},
-    {image:"src/assets/Desktop/Categorias/CategoriaBolsa.png", name:"Bolsa"},
-    {image:"src/assets/Desktop/Categorias/CategoriaCalcados.png",name:"Calçados"},
-    {image:"src/assets/Desktop/Categorias/CategoriaCalca.png", name:"Calça"},
-    {image:"src/assets/Desktop/Categorias/CategoriaCasacos.png", name:"Casacos"},
-    {image:"src/assets/Desktop/Categorias/CategoriaOculos.png", name:"Óculos"}])
+    {image: '/assets/Categorias/CategoriaCamiseta.png', name:"Camiseta"},
+    {image:"/assets/Categorias/CategoriaBolsa.png", name:"Bolsa"},
+    {image:"/assets/Categorias/CategoriaCalcados.png",name:"Calçados"},
+    {image:"/assets/Categorias/CategoriaCalca.png", name:"Calça"},
+    {image:"/assets/Categorias/CategoriaCasacos.png", name:"Casacos"},
+    {image:"/assets/Categorias/CategoriaOculos.png", name:"Óculos"}])
 </script>
   
   <style scoped>
@@ -42,13 +42,25 @@
     .categoryBox{
       @apply grid grid-cols-2 gap-4 justify-items-center md:grid-cols-3 lg:grid-cols-6 w-11/12 m-auto
     }
-  
-    .categoryCard{
-      @apply w-36 h-48 md:w-40 lg:w-36 shadow-md cursor-pointer
+
+    .categoryCard:hover img{
+      @apply transform scale-105 object-cover transition-all ease-linear;
+    }
+
+    .categoryCard:hover .textCard{
+      @apply text-lime-300 transition-all ease-linear;
     }
   
+    .categoryCard{
+      @apply w-36 h-48 overflow-hidden relative md:w-40 lg:w-36 shadow-md cursor-pointer;
+    }
+  
+    .imageCard{
+      @apply object-cover;
+    }
+
     img{
-      @apply w-full h-40;
+      @apply h-40 ;
     }
   
     .textCard{

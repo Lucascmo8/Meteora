@@ -3,21 +3,21 @@
         <h3>Conheça todas as nossas facilidades</h3>
         <div class="benefitsBox">
             <div class="benefitsCards">
-                <img src="../assets/Desktop/Icones/x-diamond.png" alt="PIX">
+                <img src="/assets/Icones/x-diamond.png" alt="PIX">
                 <div class="textBenefitCard">
                     <h4>PAGUE PELO PIX</h4>
                     <p>Ganhe 5% OFF em pagamentos via PIX</p>
                 </div>
             </div>
             <div class="benefitsCards">
-                <img src="../assets/Desktop/Icones/arrow-repeat.png" alt="Trocas">
+                <img src="/assets/Icones/arrow-repeat.png" alt="Trocas">
                 <div class="textBenefitCard">
                     <h4>TROCA GRÁTIS</h4>
                     <p>Fique livre para trocar em até 30 dias</p>
                 </div>
             </div>
             <div class="benefitsCards">
-                <img src="../assets/Desktop/Icones/flower.png" alt="Flor">
+                <img src="/assets/Icones/flower.png" alt="Flor">
                 <div class="textBenefitCard">
                     <h4>SUSTENTABILIDADE</h4>
                     <p>Moda responsável, que respeita o meio ambiente</p>
