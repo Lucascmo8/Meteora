@@ -1,9 +1,9 @@
 <template>
-    <div id="carousel">
+    <div id="carousel" @mouseenter="stopCarousel" @mouseleave="startCarousel">
         <div id="carouselInner">
-            <img src="../assets/Mobile/BannerCarousel1.png" alt=""  v-show="indexImg == 0">
-            <img src="../assets/Mobile/BannerCarousel2.png" alt="" v-show="indexImg == 1">
-            <img src="../assets/Mobile/BannerCarousel3.png" alt="" v-show="indexImg == 2">
+            <img src="../assets/Desktop/BannerCarousel1.png" alt=""  v-show="indexImg == 0" class="animate__animated animate__slideInRight">
+            <img src="../assets/Desktop/BannerCarousel2.png" alt="" v-show="indexImg == 1" class="animate__animated animate__slideInRight">
+            <img src="../assets/Desktop/BannerCarousel3.png" alt="" v-show="indexImg == 2" class="animate__animated animate__slideInRight">
         </div>
         <div class="controlsButtons">
             <button @click="prevImg" class=""><i class="uil uil-arrow-circle-left"></i></button>
@@ -18,13 +18,28 @@
 </template>
 
 <script setup lang="ts">
-    import { ref } from "vue";
+    import { ref , onMounted , onUnmounted  } from "vue";
 
     let indexImg = ref<number>(0)
+
+    let intervalTimer: number | any = null
+
+    onMounted(() =>{startCarousel()})
+
+    onUnmounted(()=>{stopCarousel()})
+
+    const startCarousel = () => {
+       intervalTimer = setInterval(nextImg,5000)
+    }
+
+    const stopCarousel = () => {
+        clearInterval(intervalTimer)
+    }
 
     const nextImg = () =>{
         indexImg.value++
         indexImg.value > 2 ? indexImg.value = 0:indexImg.value
+
     }
 
     const prevImg = () =>{
@@ -35,27 +50,28 @@
 
 <style scoped>
     #carousel {
-        @apply flex justify-center cursor-pointer
+        @apply flex justify-center cursor-pointer bg-black
     }
 
     #carouselInner{
-        @apply relative w-full h-96 overflow-hidden
+        @apply relative w-full h-96 overflow-hidden transform transition-transform duration-500
     }
 
     img{
         @apply absolute top-0 right-0 left-0 bottom-0 w-full h-full
     }
 
+
     .controlsButtons{
-        @apply absolute flex justify-between w-full h-full self-center text-white text-sm 
+        @apply absolute flex justify-between w-full self-center text-white text-sm
     }
 
     .controlsButtons > button{
-        @apply h-full w-10
+        @apply h-full w-8 text-3xl
     }
 
     .spotlightPosition{
-        @apply absolute flex justify-center w-full self-end pb-8 gap-2
+        @apply absolute flex justify-center w-full self-end pb-8 gap-2 
     }
     .spotlightBar{
         @apply w-9 border border-gray-400

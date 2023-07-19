@@ -3,8 +3,8 @@
         <div id="navegationBox">
             <img src="../assets/logo.png" alt="Logo da Meteora">
             <button @click="toogleMenu" v-show="!showMenu" id="btnMenuMobile"><i class="uil uil-bars"></i></button>
-            <nav v-show="showMenu" class="menuMobile">
-                <button @click="toogleMenu"><i class="uil uil-multiply"></i></button>
+            <nav v-show="showMenu" id="menuMobile" class="menuMobile animate__animated animate__slideInDown">
+                <button @click="closeMenu"><i class="uil uil-multiply"></i></button>
                 <a href="/" class="firstLink">Home</a>
                 <a href="/">Nossas lojas</a>
                 <a href="/">Novidades</a>
@@ -28,8 +28,20 @@
     import { ref } from 'vue'
     let showMenu = ref<boolean>(false)
 
+    
+
     const toogleMenu =()=>{
+        let menuMobile: HTMLElement | null = document.getElementById("menuMobile")
+        menuMobile?.classList.add("animate__slideInDown")
+        menuMobile?.classList.remove("animate__slideOutUp")
         showMenu.value = !showMenu.value
+    }
+
+    const closeMenu = () =>{
+        let menuMobile: HTMLElement | null = document.getElementById("menuMobile")
+        menuMobile?.classList.remove("animate__slideInDown")
+        menuMobile?.classList.add("animate__slideOutUp")
+        setTimeout(toogleMenu,1100)
     }
 </script>
 
@@ -47,11 +59,11 @@
     }
 
     #navegationBox{
-        @apply flex items-end justify-between p-5 md:w-full md:justify-start;
+        @apply flex items-center justify-between px-5 h-16 md:w-full md:justify-start;
     }
 
     .menuMobile{
-        @apply absolute right-0 top-0 w-36 flex flex-col bg-gray-700 py-2 px-4 md:hidden;
+        @apply absolute right-0 top-0 w-36 flex flex-col z-50 bg-gray-700 pt-3 pb-2 px-4 md:hidden;
     }
 
     .menuDesktop{
@@ -59,7 +71,7 @@
     }
 
     .menuMobile > button{
-        @apply self-end text-lime-300 text-xl w-5 h-5 md:hidden;
+        @apply self-end text-lime-300 text-xl w-5 h-5 z-50 md:hidden; 
     }
 
     a{

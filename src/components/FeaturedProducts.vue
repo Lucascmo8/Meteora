@@ -28,7 +28,7 @@
     }
 
   const products = ref<Product[]>([
-    {image: '../assets/Desktop/ImagensCards/Camiseta.png', name:"Camiseta Conforto",text:"Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.", price:70},
+    {image: 'src/assets/Desktop/ImagensCards/Camiseta.png', name:"Camiseta Conforto",text:"Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.", price:70},
     {image: 'src/assets/Desktop/ImagensCards/Calca.png', name:"Calça Alfaiataria",text:"Modelo wide leg alfaiataria em linho. Uma peça pra vida toda!", price:180},
     {image: 'src/assets/Desktop/ImagensCards/Tenis.png', name:"Tênis Chunky", text:"Snicker casual om soldado mais alto e modelagem robusta. Modelo unissex.", price:250},
     {image: 'src/assets/Desktop/ImagensCards/Jaqueta.png', name:"Jaqueta Jeans",text:"Modelo unissex oversized com gola de camurça. Atemporal e autêntia!", price:150},
@@ -38,16 +38,20 @@
 </script>
 
 <style scoped>
+    section{
+        @apply py-6
+    }
+
     h2{
-        @apply text-center text-3xl font-medium
+        @apply text-center text-3xl font-medium mb-8 
     }
 
     .featuredProductsBox{
-        @apply flex flex-wrap justify-center gap-8 w-11/12 m-auto
+        @apply grid justify-center gap-8 w-11/12 m-auto md:grid-cols-2 xl:grid-cols-3
     }
 
     .productCard{
-        @apply w-80 border border-gray-200 shadow-lg
+        @apply w-80 border border-gray-200 shadow-lg m-auto
     }
 
     img{

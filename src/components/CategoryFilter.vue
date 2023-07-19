@@ -4,7 +4,7 @@
       <div class="categoryBox">
           <div class="categoryCard" v-for="(category,index) in categories" :key="index">
               <div class="imageCard">
-                  <img src="../assets/Desktop/Categorias/CategoriaCamiseta.png" alt="" >
+                  <img :src="category.image" alt="" >
               </div>
               <div class="textCard">
                   <p>{{ category.name}}</p>
@@ -14,24 +14,31 @@
     </section>
   </template>
   
-  <script setup lang="ts">
-    import { ref } from 'vue';
+<script setup lang="ts">
+  import { ref } from 'vue';
   
-    interface Item{
-      image:string;
-      name:string
-    }
-  
-    const categories = ref<Item[]>([
-      {image: '../assets/Desktop/Categorias/CategoriaCamiseta.png', name:"Camiseta"},
-      {image:"src/assets/Desktop/Categorias/CategoriaBolsa.png", name:"Bolsa"},
-      {image:"src/assets/Desktop/Categorias/CategoriaCalcados.png",name:"Calçados"},
-      {image:"src/assets/Desktop/Categorias/CategoriaCalca.png", name:"Calça"},
-      {image:"src/assets/Desktop/Categorias/CategoriaCasacos.png", name:"Casacos"},
-      {image:"src/assets/Desktop/Categorias/CategoriaOculos.png", name:"Óculos"}])
-  </script>
+  interface Item{
+    image:string;
+    name:string
+  }
+
+  const categories = ref<Item[]>([
+    {image: 'src/assets/Desktop/Categorias/CategoriaCamiseta.png', name:"Camiseta"},
+    {image:"src/assets/Desktop/Categorias/CategoriaBolsa.png", name:"Bolsa"},
+    {image:"src/assets/Desktop/Categorias/CategoriaCalcados.png",name:"Calçados"},
+    {image:"src/assets/Desktop/Categorias/CategoriaCalca.png", name:"Calça"},
+    {image:"src/assets/Desktop/Categorias/CategoriaCasacos.png", name:"Casacos"},
+    {image:"src/assets/Desktop/Categorias/CategoriaOculos.png", name:"Óculos"}])
+</script>
   
   <style scoped>
+    section{
+        @apply py-6
+    }
+
+    h2{
+      @apply text-center text-[28px] font-medium mb-6 xl:mb-8
+    }
     .categoryBox{
       @apply grid grid-cols-2 gap-4 justify-items-center md:grid-cols-3 lg:grid-cols-6 w-11/12 m-auto
     }
