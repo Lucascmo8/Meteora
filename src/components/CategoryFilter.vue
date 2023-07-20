@@ -44,11 +44,11 @@
     }
 
     .categoryCard:hover img{
-      @apply transform scale-105 object-cover transition-all ease-linear;
+      @apply transform scale-105;
     }
 
     .categoryCard:hover .textCard{
-      @apply text-lime-300 transition-all ease-linear;
+      @apply text-lime-300;
     }
   
     .categoryCard{
@@ -56,14 +56,14 @@
     }
   
     .imageCard{
-      @apply object-cover;
+      @apply relative object-cover ;
     }
 
     img{
-      @apply h-40 ;
+      @apply h-40 object-cover relative transition-all duration-200 ease-linear;
     }
   
     .textCard{
-      @apply bg-black text-white font-medium text-center px-2 py-1;
+      @apply bg-black h-full w-full absolute transition-all duration-150 ease-linear text-white font-medium text-center px-2 py-1;
     }
   </style>
