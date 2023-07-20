@@ -56,7 +56,7 @@
     }
   
     .imageCard{
-      @apply relative object-cover ;
+      @apply relative object-cover;
     }
 
     img{
