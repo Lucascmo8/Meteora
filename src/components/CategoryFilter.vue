@@ -44,7 +44,7 @@
     }
 
     .categoryCard:hover img{
-      @apply transform scale-105;
+      @apply transform scale-110;
     }
 
     .categoryCard:hover .textCard{
