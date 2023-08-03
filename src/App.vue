@@ -10,8 +10,12 @@
 
 </script>
 
-<style scoped>
+<style>
   *{
     @apply font-[Inter]
+  }
+
+  input,label{
+    @apply cursor-pointer
   }
 </style>

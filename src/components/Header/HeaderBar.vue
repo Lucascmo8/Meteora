@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header :class="{ scroll: scrolling }">
         <div id="navegationBox">
             <img src="../../assets/logo.png" alt="Logo da Meteora">
             <button @click="toogleMenu" v-show="!showMenu" id="btnMenuMobile"><i class="uil uil-bars"></i></button>
@@ -31,11 +31,21 @@
         menuMobile?.classList.add("animate__slideOutUp")
         setTimeout(toogleMenu,1100)
     }
+
+    const scrolling = ref<boolean>(false)
+
+    window.addEventListener('scroll', ()=>{
+        scrolling.value = window.scrollY > 0
+    })
 </script>
 
 <style scoped>
     header{
-        @apply bg-black w-full text-white flex flex-col md:items-center md:flex-row md:justify-between;
+        @apply bg-black w-full top-0 fixed z-50 text-white flex flex-col md:items-center md:flex-row md:justify-between;
+    }
+    
+    header.scroll{
+        @apply shadow-lg;
     }
 
     img{

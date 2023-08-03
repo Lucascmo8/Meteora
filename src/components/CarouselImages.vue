@@ -73,7 +73,7 @@
 
 <style scoped>
     #carousel {
-        @apply flex h-[415px] justify-center cursor-pointer bg-black
+        @apply flex h-[415px] justify-center cursor-pointer bg-black mt-36 md:mt-16
     }
 
     #carouselInner{

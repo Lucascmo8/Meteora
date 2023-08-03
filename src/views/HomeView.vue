@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main :class="{activeDetails:productStore.showDetails}">
     <CarouselImages />
     <CategoryFilter />
     <FeaturedProducts />
@@ -14,4 +14,13 @@
   import FeaturedProducts from '../components/FeaturedProducts.vue';
   import BenefitsSection from '../components/BenefitsSection.vue';
   import NewsletterSection from '../components/NewsletterSection.vue';
+  import { useProductsStore } from '../stores/products';
+
+  const productStore = useProductsStore()
 </script>
+
+<style>
+  main.activeDetails{
+    @apply overflow-y-auto fixed h-auto w-full
+  }
+</style>

@@ -1,8 +1,8 @@
 <template>
     <footer>
-        <p>2023 &copy; Desenvolvido por Alura | Projeto fictício sem fins comerciais.</p>
+        <p>2023 &copy; Desenvolvido por <a href="https://github.com/Lucascmo8" target="_blank">Lucas Costa e Alura</a> | Projeto fictício sem fins comerciais.</p>
     </footer>
-</template>
+</template> 
 
 <style scoped>
     footer{
@@ -11,5 +11,9 @@
 
     p{
         @apply text-center  w-52 sm:w-full
+    }
+
+    a{
+        @apply underline font-bold
     }
 </style>

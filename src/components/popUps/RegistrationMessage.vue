@@ -1,7 +1,8 @@
 <template>
         <div id="RegistrationMessageContainer" class="menuMobile animate__animated animate__slideInDown">
             <div class="titleBox">
-                <h1><i class="uil uil-check-circle"></i> E-mail cadastrado com sucesso!</h1>
+                <i class="uil uil-check-circle"></i>
+                <h1>E-mail cadastrado com sucesso!</h1>
                 <button @click="$emit('closeMessage')"><i class="uil uil-multiply"></i></button>
             </div>
             <p>Em breve você receberá novidades exclusivas da Meteora.</p>
@@ -15,7 +16,7 @@
 
 <style scoped>
     #RegistrationMessageContainer{
-        @apply flex flex-col fixed top-0 w-full
+        @apply flex flex-col fixed top-0 w-full z-50
     }
 
     .titleBox{
