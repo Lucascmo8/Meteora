@@ -1,19 +1,25 @@
 <template>
-    <footer>
-        <p>2023 &copy; Desenvolvido por <a href="https://github.com/Lucascmo8" target="_blank">Lucas Costa e Alura</a> | Projeto fictício sem fins comerciais.</p>
-    </footer>
-</template> 
+  <footer>
+    <p>
+      2023 &copy; Desenvolvido por
+      <a href="https://github.com/Lucascmo8" target="_blank"
+        >Lucas Costa e Alura</a
+      >
+      | Projeto fictício sem fins comerciais.
+    </p>
+  </footer>
+</template>
 
 <style scoped>
-    footer{
-        @apply  w-full flex items-center justify-center text-center text-white text-xs bg-black p-4
-    }
+  footer {
+    @apply w-full p-4 flex justify-center items-center text-center text-xs bg-black text-white;
+  }
 
-    p{
-        @apply text-center  w-52 sm:w-full
-    }
+  p {
+    @apply w-52 sm:w-full text-center;
+  }
 
-    a{
-        @apply underline font-bold
-    }
+  a {
+    @apply font-bold underline;
+  }
 </style>

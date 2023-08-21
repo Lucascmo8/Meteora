@@ -1,38 +1,36 @@
 <template>
-    <div>
-        <h2>{{ Props.name }}</h2>
-        <p>{{ Props.text }}</p>
-        <hr>
-    </div>
+  <div>
+    <h2>{{ Props.name }}</h2>
+    <p>{{ Props.text }}</p>
+    <hr />
+  </div>
 </template>
 
 <script setup lang="ts">
-    const Props = defineProps({
-        name:{
-            type:String
-        },
-        text:{
-            type:String
-        }
-    })
+  const Props = defineProps({
+    name: {
+      type: String
+    },
+    text: {
+      type: String
+    }
+  })
 </script>
 
-
 <style scoped>
-    div{
-        @apply flex flex-col gap-6
-    }
+  div {
+    @apply flex flex-col gap-6;
+  }
 
-    h2{
-        @apply font-bold
-    }
+  h2 {
+    @apply font-bold;
+  }
 
-    p{
-        @apply text-xs
-    }
+  p {
+    @apply text-xs;
+  }
 
-    hr{
-        /* border-width: 2px; */
-        border-color: black;
-    }
+  hr {
+    border-color: black;
+  }
 </style>
